@@ -1,27 +1,34 @@
-# 🤖 Job Bot - InfoJobs Scraper
+# 🤖 Job Bot – InfoJobs Scraper  
 
-Um bot em **Python + Selenium** que pesquisa vagas no [InfoJobs](https://www.infojobs.com.br), coleta informações e salva os resultados em **CSV** automaticamente.  
+Um bot em **Python + Selenium** que pesquisa vagas no InfoJobs, coleta informações detalhadas e salva os resultados em **CSV automaticamente**.  
 
-Ideal para estudos de **automação web** e **raspagem de dados** 🚀  
-
----
-
-## ✨ Funcionalidades
-- 🔎 Pesquisa vagas por **cargo** e **cidade**.  
-- 🌍 Navega automaticamente entre páginas de resultados.  
-- 📊 Coleta os seguintes dados:
-  - Título da vaga  
-  - Empresa  
-  - Localização  
-  - Link da vaga  
-- 💾 Exporta os dados em **CSV** (`data/jobs.csv`).  
+Ideal para estudos de **automação web**, **raspagem de dados** e para compor um **portfólio de desenvolvedor júnior**.  
 
 ---
 
-## 🛠 Tecnologias Utilizadas
-- 🐍 [Python](https://www.python.org/)  
-- 🧭 [Selenium](https://www.selenium.dev/)  
-- ⚙️ [WebDriver Manager](https://pypi.org/project/webdriver-manager/)  
+## 🚀 Funcionalidades  
+
+✅ Pesquisa vagas por **cargo** e **cidade**  
+✅ Navega automaticamente entre páginas de resultados  
+✅ Coleta os seguintes dados:  
+
+- 🏷️ **Título da Vaga**  
+- 🏢 **Empresa**  
+- 📍 **Localização**  
+- 💰 **Salário**  
+- 📄 **Tipo de Contratação** (CLT, PJ, etc.)  
+- 🏢 **Modalidade** (Remoto, Híbrido, Presencial)  
+- 🔗 **Link da vaga**  
+
+✅ Exporta os dados em **CSV (`data/jobs.csv`)**  
+
+---
+
+## 🛠️ Tecnologias Utilizadas  
+
+- [Python](https://www.python.org/) 🐍  
+- [Selenium](https://www.selenium.dev/) 🌐  
+- [WebDriver Manager](https://pypi.org/project/webdriver-manager/) ⚙️  
 
 ---
 
@@ -35,7 +42,7 @@ Ideal para estudos de **automação web** e **raspagem de dados** 🚀
 ---
 
 ## 👨‍💻 Autor
-Feito com 💙 por **Luan Santos**  
+Feito por **Luan Santos**  
 
 🔗 [LinkedIn](https://linkedin.com/in/luan-carlos-dos-santos/)  
 💻 [GitHub](https://github.com/luansantos-code)  
