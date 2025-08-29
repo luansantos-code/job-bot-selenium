@@ -2,7 +2,7 @@
 
 Um bot em **Python + Selenium** que pesquisa vagas no InfoJobs, coleta informações detalhadas e salva os resultados em **CSV automaticamente**.  
 
-Ideal para estudos de **automação web**, **raspagem de dados** e para compor um **portfólio de desenvolvedor júnior**.  
+Ideal para estudos de **automação web** e **raspagem de dados**.  
 
 ---
 
