@@ -48,30 +48,38 @@ class JobBot:
 
             for card in cards:
                 try:
-                    title = card.find_element(By.CSS_SELECTOR, "h2").text
+                    title = card.find_element(By.CSS_SELECTOR, "a h2").text
                     link = card.find_element(By.CSS_SELECTOR, "a").get_attribute("href")
 
                     try:
-                        company = card.find_element(By.CSS_SELECTOR, "div.text-body a").text
+                        company = card.find_element(By.CSS_SELECTOR, ".text-body a").text
                     except:
                         company = "Não informado"
 
                     try:
-                        location = card.find_element(By.CSS_SELECTOR, "div.mb-8").text
+                        location = card.find_element(By.CSS_SELECTOR, ".mb-8").text
                     except:
                         location = "Não informado"
 
-                    jobs.append([title, company, location, link])
-                except Exception as e:
-                    print("Erro ao coletar vaga:", e)
+                    try:
+                        salary = card.find_element(By.XPATH, ".//*[contains(text(), 'R$')]").text
+                    except:
+                        salary = "Não informado"
 
-            try:
-                next_button = self.driver.find_element(By.CSS_SELECTOR, "a[title='Próxima']")
-                next_button.click()
-                time.sleep(3)
-            except:
-                print("Não há mais páginas disponíveis.")
-                break
+                    try:
+                        contract_type = card.find_element(By.XPATH, ".//*[contains(text(), 'CLT') or contains(text(), 'PJ') or contains(text(), 'Estágio')]").text
+                    except:
+                        contract_type = "Não informado"
+
+                    try:
+                        modality = card.find_element(By.XPATH, ".//*[contains(text(), 'Remoto') or contains(text(), 'Híbrido') or contains(text(), 'Presencial')]").text
+                    except:
+                        modality = "Não informado"
+
+                    jobs.append([title, company, location, salary, contract_type, modality, link])
+                except:
+                    pass
+
         return jobs
 
     def fechar(self):
